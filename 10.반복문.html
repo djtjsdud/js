@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>while</title>
+</head>
+<body>
+    <script>
+
+        // let a = 2;
+
+        // while(a <= 20){
+        //     document.write(`${a}<br>`);
+        //     a++;
+        // }
+        // 1~20까지의 숫자 중 짝수만 10개 출력
+        let i  = 0; //10개 <- 개수
+        let num = 1; // 1~20까지의 숫자 중 짝수만
+        while(i < 10){
+            if(num % 2 === 0 && num <= 20){
+                document.write(`${num}<br>`);
+                i++;
+            }
+            num++;
+        }
+
+        function getvaildnumber(){
+
+            let number;
+
+            while(true){
+
+                number = parseInt(prompt('1부터 10까지 중 숫자를 입력하세요'));
+
+                if(number >= 1 && number <= 10){
+                    break;
+                }else{
+                    alert('유효한 숫자가 아닙니다');
+                }
+            }
+            return number;
+        }
+
+        let vaildnumber = getvaildnumber();
+        // console.log(`입력한 숫자는 ${getvaildnumber}`);
+        alert(`입력한 숫자는 ${vaildnumber}`);
+
+        // 박스에 값을 담아둬야 비교할 수 있다.
+        // 브레이크로 문장 자체를 막아버릴(종료)시킬 수 있다.
+        // 일치연산자를 써서 맞냐 아니냐를 비교
+
+    </script>
+</body>
+</html>
